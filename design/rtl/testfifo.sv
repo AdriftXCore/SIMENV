@@ -21,7 +21,7 @@ xpm_fifo_sync  #(
 	.FIFO_WRITE_DEPTH   (DEPTH     ),   
 	.FULL_RESET_VALUE   (0         ),      
 	.PROG_EMPTY_THRESH  (10        ),    
-	.PROG_FULL_THRESH   (14        ),     
+	.PROG_FULL_THRESH   (11        ),     
 	.RD_DATA_COUNT_WIDTH(1         ),   
 	.READ_DATA_WIDTH    (WIDTH ),      
 	.READ_MODE          ("fwft"    ),         
@@ -44,4 +44,3 @@ np_ppe_pb_cmd_trans(
 );
 
 endmodule
-
