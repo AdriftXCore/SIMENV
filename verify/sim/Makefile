@@ -18,7 +18,6 @@ mklist:
 				rm -rf ./filelist.f
 				touch ./filelist.f
 				echo "+incdir+${include_list}" > filelist.f
-				find  ${commonip_list}  -type f >> ./filelist.f 
 				find  $(rtl_list) -type f \( -name "*.v" -o -name "*.sv" \) >> filelist.f
 
 compile:
