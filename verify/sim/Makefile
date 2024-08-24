@@ -1,5 +1,5 @@
 # tb_top name
-tc =  tb_testfifo
+tc =  tb_top
 
 verdi_opts = -P $(VERDI_HOME)/share/PLI/VCS/LINUX64/novas.tab $(VERDI_HOME)/share/PLI/VCS/LINUX64/pli.a
 
@@ -25,6 +25,7 @@ compile:
 				+v2k \
 				-full64 \
 				-work xil_defaultlib \
+				"/opt/vivado/glbl.v" \
 				+incdir+${include_list} \
 				-sverilog \
 				+define+SIMULATION_EN \
@@ -40,7 +41,7 @@ elaborate:
 				-sverilog \
 			    -debug_acc+all -debug_region+cell+encrypt \
 				$(verdi_opts) \
-				xil_defaultlib.${tc} \
+				xil_defaultlib.${tc} xil_defaultlib.glbl\
 				-o simv \
 				2>&1 | tee -a vlogan.log
 
@@ -53,7 +54,7 @@ elaborateR:
 				-sverilog \
 			    -debug_acc+all -debug_region+cell+encrypt \
 				$(verdi_opts) \
-				xil_defaultlib.${tc} \
+				xil_defaultlib.${tc} xil_defaultlib.glbl\
 				-o simv \
 				2>&1 | tee -a vlogan.log
 
