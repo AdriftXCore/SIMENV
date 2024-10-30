@@ -21,7 +21,7 @@ mklist:
 				find  $(rtl_list) -type f \( -name "*.v" -o -name "*.sv" \) >> filelist.f
 
 compile:
-				vlogan \
+				vlogan -assert svaext\
 				+v2k \
 				-full64 \
 				-work xil_defaultlib \
