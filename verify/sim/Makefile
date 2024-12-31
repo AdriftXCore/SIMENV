@@ -63,6 +63,13 @@ sim:
 				./simv -ucli -licqueue -l simulate.log -do simulate.do
 
 verdi:
+				@echo "Are you sure you want to run make verdi? (y/n)"
+				@read -p "Enter choice: " choice; \
+				if [ "$$choice" != "y" ]; then \
+					echo "Aborting..."; \
+					exit 1; \
+				fi
+				@echo "Proceeding with make verdi..."
 				verdi \
 				-sv \
 				+v2k \
