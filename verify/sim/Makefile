@@ -120,7 +120,7 @@ verdi_iverilog:
 				+incdir+${include_list} \
 				$(tb_files) \
 				-F ./filelist.f \
-				-ssf *.fsdb\
+				-ssf *.vcd\
 				-nologo &
 
 
